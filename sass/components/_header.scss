@@ -1,0 +1,33 @@
+@use 'variables' as v;
+.header {
+    background-color: v.$secundary-color;
+    .header__notification {
+        background-color: v.$primary-color;
+        .notification__text {
+            margin: 0;
+            padding: 20px;
+            color: v.$just-white;
+            font-size: 1.8rem;
+            text-align: center;
+            line-height: 1.7;
+            font-weight: 700;
+            .text__link {
+                color: v.$just-white;
+            }
+        }
+    }
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px 10px 20px;
+        .navbar__logo {
+            font-weight: 700;
+            font-size: 2rem;
+        }
+        .navbar__menu {
+            font-size: 2rem;
+        }
+    }
+}
+

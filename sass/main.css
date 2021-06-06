@@ -1,1 +1,148 @@
-/* No CSS *//*# sourceMappingURL=main.css.map */
+html {
+  font-family: "Cabin", sans-serif;
+  font-size: 62.5%;
+  margin: 0;
+}
+
+p {
+  font-size: 18px;
+}
+
+.button {
+  background-color: #000;
+  border: none;
+  border-radius: 5px;
+  color: #FFF;
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+.header {
+  background-color: #F0EEEB;
+}
+.header .header__notification {
+  background-color: #000;
+}
+.header .header__notification .notification__text {
+  margin: 0;
+  padding: 20px;
+  color: #FFF;
+  font-size: 1.8rem;
+  text-align: center;
+  line-height: 1.7;
+  font-weight: 700;
+}
+.header .header__notification .notification__text .text__link {
+  color: #FFF;
+}
+.header .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px 10px 20px;
+}
+.header .navbar .navbar__logo {
+  font-weight: 700;
+  font-size: 2rem;
+}
+.header .navbar .navbar__menu {
+  font-size: 2rem;
+}
+
+.hero {
+  background-color: #F0EEEB;
+}
+.hero .hero__container {
+  position: relative;
+  margin: 0 auto;
+}
+.hero .hero__container .hero__bg {
+  display: block;
+  padding: 0 20px;
+  width: 100%;
+  height: auto;
+}
+.hero .hero__container .hero__box {
+  position: absolute;
+  top: 30px;
+  left: 10%;
+  background-color: #FFF;
+  border-radius: 10px;
+  width: 180px;
+  height: 160px;
+  padding: 20px;
+}
+.hero .hero__container .hero__box .box__title {
+  font-size: 1.6rem;
+  margin: 0 0 14px 0;
+}
+.hero .hero__container .hero__box .box__line {
+  border-top: 1px solid #E2E2E2;
+  margin: 0;
+}
+.hero .hero__container .hero__box .box__price {
+  font-weight: bold;
+  margin: 14px 0;
+}
+.hero .hero__container .hero__box .button--box {
+  padding: 12px 35px;
+}
+.hero .hero__content {
+  padding: 0 20px;
+}
+.hero .hero__content .content__title {
+  font-size: 3.6rem;
+  font-weight: bold;
+  margin: 40px 0 10px 0;
+}
+.hero .hero__content .content__text {
+  font-family: "Source Sans Pro", sans-serif;
+  line-height: 1.5;
+  margin: 0 0 16px 0;
+}
+.hero .hero__content .content__list {
+  list-style: none;
+  padding: 0;
+}
+.hero .hero__content .content__list .list__icon {
+  color: #000;
+  margin-right: 16px;
+}
+.hero .hero__content .content__list .list__item {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #5A5444;
+  margin-bottom: 8px;
+}
+.hero .hero__content .content__form {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 32px;
+  padding-bottom: 40px;
+}
+.hero .hero__content .content__form .form__input {
+  font-size: 1.8rem;
+  border-radius: 5px;
+  border: 1px solid #B1B1B1;
+  padding: 18px 24px;
+  width: 200px;
+}
+.hero .hero__content .content__form .form__input::placeholder {
+  color: #ADADAD;
+  font-size: 1.8rem;
+}
+.hero .hero__content .content__form .button--form {
+  padding: 18px 24px;
+}
+
+.content2 {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 48px 0;
+}
+.content2 .logos__img:not(:last-child) {
+  margin-right: 10px;
+}
+
+/*# sourceMappingURL=main.css.map */

@@ -1,9 +1,1 @@
-{
-    "version": 3,
-    "mappings": "",
-    "sources": [
-        "main.scss"
-    ],
-    "names": [],
-    "file": "main.css"
-}
+{"version":3,"sourceRoot":"","sources":["components/_globals.scss","components/_variables.scss","components/_header.scss","components/_hero.scss","components/_content2.scss"],"names":[],"mappings":"AAEA;EACI,aCOgB;EDNhB;EACA;;;AAEJ;EACI;;;AAEJ;EACI,kBCVY;EDWZ;EACA;EACA,OCVS;EDWT;EACA;;;AEfJ;EACI;;AACA;EACI,kBDHQ;;ACIR;EACI;EACA;EACA,ODJC;ECKD;EACA;EACA;EACA;;AACA;EACI,ODVH;;ACcT;EACI;EACA;EACA;EACA;;AACA;EACI;EACA;;AAEJ;EACI;;;AC3BZ;EACI;;AACA;EACI;EACA;;AACA;EACI;EACA;EACA;EACA;;AAEJ;EACI;EACA;EACA;EACA,kBFZC;EEaD;EACA;EACA;EACA;;AACA;EACI;EACA;;AAEJ;EACI;EACA;;AAEJ;EACI;EACA;;AAEJ;EACI;;AAIZ;EACI;;AACA;EACI;EACA;EACA;;AAEJ;EACI,aFnCO;EEoCP;EACA;;AAEJ;EACI;EACA;;AACA;EACI,OFrDA;EEsDA;;AAEJ;EACI;EACA;EACA,OFrDH;EEsDG;;AAGR;EACI;EACA;EACA;EACA;EACA;;AACA;EACI;EACA;EACA;EACA;EACA;;AAEJ;EACI;EACA;;AAEJ;EACI;;;AClFhB;EACI;EACA;EACA;;AACA;EACI","file":"main.css"}

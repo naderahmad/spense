@@ -1,0 +1,87 @@
+@use 'variables' as v;
+.hero {
+    background-color: v.$secundary-color;
+    .hero__container {
+        position: relative;
+        margin: 0 auto;
+        .hero__bg {
+            display: block;
+            padding: 0 20px;
+            width: 100%;
+            height: auto;
+        }
+        .hero__box {
+            position: absolute;
+            top: 30px;
+            left: 10%;
+            background-color: v.$just-white;
+            border-radius: 10px;
+            width: 180px;
+            height: 160px;
+            padding: 20px;
+            .box__title {
+                font-size: 1.6rem;
+                margin: 0 0 14px 0;
+            }
+            .box__line {
+                border-top: 1px solid #E2E2E2;
+                margin: 0;
+            }
+            .box__price {
+                font-weight: bold;
+                margin: 14px 0;
+            }
+            .button--box {
+                padding: 12px 35px;
+            }
+        }
+    }
+    .hero__content {
+        padding: 0 20px;
+        .content__title {
+            font-size: 3.6rem;
+            font-weight: bold;
+            margin: 40px 0 10px 0;
+        }
+        .content__text {
+            font-family: v.$family-font-sans;
+            line-height: 1.5;
+            margin: 0 0 16px 0;
+        }
+        .content__list {
+            list-style: none;
+            padding: 0;
+            .list__icon {
+                color: v.$primary-color;
+                margin-right: 16px;
+            }
+            .list__item {
+                font-size: 1.8rem;
+                font-weight: 600;
+                color: v.$body-color;
+                margin-bottom: 8px;
+            }
+        }
+        .content__form {
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            margin-top: 32px;
+            padding-bottom: 40px;
+            .form__input {
+                font-size: 1.8rem;
+                border-radius: 5px;
+                border: 1px solid #B1B1B1;
+                padding: 18px 24px;
+                width: 200px;
+            }
+            .form__input::placeholder {
+                color: #ADADAD;
+                font-size: 1.8rem;
+            }
+            .button--form {
+                padding: 18px 24px;
+            }
+        }
+    }
+}
