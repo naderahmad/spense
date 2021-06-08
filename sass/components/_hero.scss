@@ -1,24 +1,45 @@
 @use 'variables' as v;
 .hero {
     background-color: v.$secundary-color;
+    @include v.breakpoint(desktop) {
+        display: flex;
+        flex-direction: row-reverse;
+        padding: 0 150px 70px 150px;
+    }
     .hero__container {
         position: relative;
         margin: 0 auto;
-        .hero__bg {
-            display: block;
-            padding: 0 20px;
-            width: 100%;
-            height: auto;
+        padding: 0 40px;
+        @include v.breakpoint(desktop) {
+            width: 425px;
+            height: 520px;
+        }
+        .hero__img {
+            background-image: url("../assets/images/img.png");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin: 0 auto;
+            min-width: 374px;
+            height: 500px;
+            border-radius: 10px; 
+            @include v.breakpoint(tablet) {
+                height: 366px;
+            }
+            @include v.breakpoint(desktop) {
+                width: 425px;
+                height: 520px;
+            }
         }
         .hero__box {
             position: absolute;
             top: 30px;
-            left: 10%;
+            left: 70px;
             background-color: v.$just-white;
             border-radius: 10px;
             width: 180px;
             height: 160px;
-            padding: 20px;
+            padding: 20px clamp(20px, 1vw, 1440px);
             .box__title {
                 font-size: 1.6rem;
                 margin: 0 0 14px 0;
@@ -32,20 +53,23 @@
                 margin: 14px 0;
             }
             .button--box {
-                padding: 12px 35px;
+                padding: 12px clamp(35px, 1vw, 1440px);
             }
         }
     }
     .hero__content {
-        padding: 0 20px;
+        padding: 0 clamp(20px, 6vw, 1440px);
         .content__title {
             font-size: 3.6rem;
             font-weight: bold;
             margin: 40px 0 10px 0;
+            @include v.breakpoint(tablet) {
+                font-size: 5.6rem;
+            }
         }
         .content__text {
             font-family: v.$family-font-sans;
-            line-height: 1.5;
+            line-height: 1.7;
             margin: 0 0 16px 0;
         }
         .content__list {
@@ -58,6 +82,7 @@
             .list__item {
                 font-size: 1.8rem;
                 font-weight: 600;
+                line-height: 1.6;
                 color: v.$body-color;
                 margin-bottom: 8px;
             }
@@ -73,14 +98,20 @@
                 border-radius: 5px;
                 border: 1px solid #B1B1B1;
                 padding: 18px 24px;
-                width: 200px;
+                width: 50%;
+                @include v.breakpoint(tablet) {
+                    margin-right: 16px;
+                }
             }
             .form__input::placeholder {
                 color: #ADADAD;
                 font-size: 1.8rem;
             }
             .button--form {
-                padding: 18px 24px;
+                padding: 18px clamp(20px, 6vw, 1440px);
+            }
+            @include v.breakpoint(tablet) {
+                justify-content: flex-start;
             }
         }
     }

@@ -10,3 +10,16 @@ $footer-color: #9E9E9E;
 // fonts
 $family-font-cabin: 'Cabin', sans-serif;
 $family-font-sans: 'Source Sans Pro', sans-serif;
+// breakPoints
+$breakpoints: (
+    tablet: 768px,
+    desktop: 1440px
+);
+
+@mixin breakpoint($size) {
+    $breakpoint-value: map-get($breakpoints, $size);
+
+    @media screen and (min-width: $breakpoint-value) {
+        @content;
+    }
+}

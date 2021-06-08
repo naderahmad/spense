@@ -5,7 +5,7 @@
         background-color: v.$primary-color;
         .notification__text {
             margin: 0;
-            padding: 20px;
+            padding: 20px clamp(20px, 6vw, 1440px);
             color: v.$just-white;
             font-size: 1.8rem;
             text-align: center;
@@ -14,20 +14,86 @@
             .text__link {
                 color: v.$just-white;
             }
+            @include v.breakpoint(desktop) {
+                padding: 10px 0;
+            }
+        }
+        @include v.breakpoint(desktop) {
+            height: 50px;
         }
     }
     .navbar {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 10px 20px 10px 20px;
+        padding: 10px clamp(20px, 6vw, 1440px);
+        @include v.breakpoint(desktop) {
+            padding: 40px 150px;
+        }
         .navbar__logo {
             font-weight: 700;
             font-size: 2rem;
         }
-        .navbar__menu {
-            font-size: 2rem;
+        .navbar__wrapper {
+            display: flex;
+            @include v.breakpoint(tablet) {
+                flex-basis: auto;
+            }
+            @include v.breakpoint(desktop) {
+                flex-basis: 70%;
+                justify-content: space-between;
+            }
         }
+        .navbar__list {
+            display: none;
+            list-style: none;
+            .list__item {
+                margin-right: 24px;
+                .list_link {
+                    text-decoration: none;
+                    color: v.$primary-color;
+                    font-size: 1.8rem;
+                }
+            }
+            @include v.breakpoint(tablet) {
+                display: flex;
+                align-items: center;
+            }
+        }
+        .navbar__link {
+            .navbar__menu {
+                font-size: 2rem;
+                color: v.$primary-color;
+                @include v.breakpoint(tablet) {
+                    display: none;
+                }
+            }
+            @include v.breakpoint(tablet) {
+                display: none;
+            }
+        } 
+    }
+    .navbar__right {
+        display: none;
+        .list_link {
+            font-size: 1.8rem;
+            text-decoration: none;
+            color: v.$primary-color;
+            margin-right: 24px;
+        }
+        .button--navbar {
+            display: none;
+            width: 137px;
+            height: 58px;
+            @include v.breakpoint(tablet) {
+                display:block;
+            }
+        }
+        @include v.breakpoint(tablet) {
+            display:block;
+            display: flex;
+            align-items: center;
+        } 
     }
 }
 
