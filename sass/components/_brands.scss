@@ -1,0 +1,37 @@
+@use 'variables' as v;
+
+.brands {
+  padding: 50px 0;
+  overflow-x: hidden;
+
+  .brands-img {
+    position: relative;
+
+    &__logos {
+      position: relative;
+      display: flex;
+      align-items: center;
+      animation: slide 100s linear infinite;
+
+      img {
+        max-width: 150px;
+        transition-duration: 0.1s;
+        transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
+        display: inline;
+        height: auto;
+        margin-left: 2rem;
+        margin-right: 2rem;
+      }
+
+      @keyframes slide {
+        from {
+          transform: translate3d(0, 0, 0);
+        }
+
+        to {
+          transform: translate3d(-50%, 0, 0);
+        }
+      }
+    }
+  }
+}

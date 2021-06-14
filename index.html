@@ -1,72 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;700&family=Inter:wght@400;700&family=Source+Sans+Pro:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/d9bf2a99a6.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="stylesheet" href="./assets/css/normalize.css" />
+    <link rel="stylesheet" href="./sass/main.css" />
     <title>Spense - Landing page</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;700&family=Source+Sans+Pro:ital@0;1&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="./assets/css/normalize.css">
-    <link rel="stylesheet" href="./sass/main.css">
-</head>
-<body>
+  </head>
+
+  <body>
     <header class="header">
-        <div class="header__notification">
-            <p class="notification__text">🎉 To celebrate Spense’s launch, we will be waiving all fees for the entire month of April. <a class="text__link" href="#">You will be receiving 100% of the earnings.</a> 🎉</p>
+      <div class="header-notification">
+        <p class="header-notification__text">
+          🎉 To celebrate Spense’s launch, we will be waiving all fees for the
+          entire month of April.
+          <a href="#">You will be receiving 100% of the earnings.</a> 🎉
+        </p>
+      </div>
+
+      <nav class="header-navbar">
+        <span class="header-navbar__logo">spence.</span>
+        <div class="header-navbar__container">
+          <div class="header-navbar__links">
+            <a href="#">Business</a>
+            <a href="#">Pricing</a>
+            <a href="#">Features</a>
+          </div>
+          <div class="header-navbar__cta">
+            <a href="#">Login</a>
+            <button class="btn btn-cta">Get Started</button>
+          </div>
         </div>
-        <nav class="navbar">
-            <p class="navbar__logo">spence.</p>
-            <div class="navbar__wrapper">
-                <ul class="navbar__list">
-                    <li class="list__item"><a class="list_link" href="#">Business</a></li>
-                    <li class="list__item"><a class="list_link" href="#">Pricing</a></li>
-                    <li class="list__item"><a class="list_link" href="#">Features</a></li>
-                </ul>
-                <div class="navbar__right">
-                    <a class="list_link" href="#">Login</a>
-                    <button class="button button--navbar">Get Started</button>
-                </div>
-                <a class="navbar__link" href="#"><i class="navbar__menu fas fa-bars"></i></a>
-            </div>
-        </nav>
+        <a class="header-navbar__menu" href="#"><i class="fas fa-bars"></i></a>
+      </nav>
     </header>
+
     <section class="hero">
-        <div class="hero__container">
-            <div class="hero__img"></div>
-            <div class="hero__box">
-                <p class="box__title">April Earnings</p>
-                <hr class="box__line">
-                <p class="box__price">$272.21</p>
-                <button class="button button--box">Withdraw</button>
-            </div>
+      <div class="hero-image">
+        <div class="hero-image__earnings">
+          <span>April Earnings</span>
+          <hr />
+          <span class="price">$272.21</span>
+          <button class="btn btn-cta btn-cta--earnings">Withdraw</button>
         </div>
-        <article class="hero__content">
-            <h1 class="content__title">Share your unfiltered thoughts. Get paid.</h1>
-            <p class="content__text">Spense is an open platform for individuals to share their unfiltered thoughts. Discuss the topics you love, and get paid for doing just that.</p>
-            <ul class="content__list">
-                <li class="list__item"><i class="list__icon fas fa-check-circle"></i> Receive 99% off the earnings.</li>
-                <li class="list__item"><i class="list__icon fas fa-check-circle"></i> Get paid via Debit Card, ACH, or PayPal.</li>
-                <li class="list__item"><i class="list__icon fas fa-check-circle"></i> Withdraw your earnings anytime.</li>
-            </ul>
-            <div class="content__form">
-                <input class="form__input" type="text" placeholder="john@example.com">
-                <button class="button button--form">Get Started</button>
-            </div>
-        </article>
+      </div>
+
+      <article class="hero-text">
+        <h1 class="hero-text__title">
+          Share your unfiltered thoughts. Get paid.
+        </h1>
+        <p class="hero-text__text">
+          Spense is an open platform for individuals to share their unfiltered
+          thoughts. Discuss the topics you love, and get paid for doing just
+          that.
+        </p>
+        <ul class="hero-text__list">
+          <li>
+            <i class="fas fa-check-circle"></i>
+            <p>Receive 99% off the earnings.</p>
+          </li>
+          <li>
+            <i class="fas fa-check-circle"></i>
+            <p>Get paid via Debit Card, ACH, or PayPal.</p>
+          </li>
+          <li>
+            <i class="fas fa-check-circle"></i>
+            <p>Withdraw your earnings anytime.</p>
+          </li>
+        </ul>
+        <form class="hero-text__form">
+          <input type="email" placeholder="john@example.com" required />
+          <button class="btn btn-cta">Get Started</button>
+        </form>
+      </article>
     </section>
-    <section class="content2">
-        <div class="content2__logos">
-            <img class="logos__img" src="./assets/images/facebook-logo.png" alt="">
-            <img class="logos__img" src="./assets/images/dribbble-logo.png" alt="">
-            <img class="logos__img" src="./assets/images/youtube-logo.png" alt="">
-            <img class="logos__img" src="./assets/images/pinteres-logo.png" alt="">
-            <img class="logos__img" src="./assets/images/twitter-logo.png" alt="">
-            <img class="logos__img" src="./assets/images/reddit-logo.png" alt="">
-            <img class="logos__img" src="./assets/images/google-logo.png" alt="">
-            <img class="logos__img" src="./assets/images/slack-logo.png" alt="">
+
+    <section class="brands">
+      <div class="brands-img">
+        <div class="brands-img__logos">
+          <img src="./assets/images/facebook-logo.png" alt="facebook" />
+          <img src="./assets/images/dribbble-logo.png" alt="dribbble" />
+          <img src="./assets/images/youtube-logo.png" alt="youtube" />
+          <img src="./assets/images/pinteres-logo.png" alt="pinteres" />
+          <img src="./assets/images/twitter-logo.png" alt="twitter" />
+          <img src="./assets/images/reddit-logo.png" alt="reddit" />
+          <img src="./assets/images/google-logo.png" alt="google" />
+          <img src="./assets/images/slack-logo.png" alt="slack" />
+          <img src="./assets/images/facebook-logo.png" alt="facebook" />
+          <img src="./assets/images/dribbble-logo.png" alt="dribbble" />
+          <img src="./assets/images/youtube-logo.png" alt="youtube" />
+          <img src="./assets/images/pinteres-logo.png" alt="pinteres" />
+          <img src="./assets/images/twitter-logo.png" alt="twitter" />
+          <img src="./assets/images/reddit-logo.png" alt="reddit" />
+          <img src="./assets/images/google-logo.png" alt="google" />
+          <img src="./assets/images/slack-logo.png" alt="slack" />
         </div>
+      </div>
     </section>
-</body>
+
+    <section class="main">
+      <article class="main-container main-escrow">
+        <div class="main-container__text main-escrow__text">
+          <h2>Secure your money with Escrow.</h2>
+          <p>
+            Spense uses Escrow to secure all payments. We believe Escrow offers
+            the highest level of security for your payments, so you never need
+            to worry about scams.
+          </p>
+          <a href="#">Learn more about Escrow →</a>
+        </div>
+        <div class="main-escrow__img">
+          <img src="/assets/images/phone.png" alt="iphone" />
+        </div>
+      </article>
+
+      <article class="main-container main-demo">
+        <div class="main-container__text">
+          <h2>A text editor like no other.</h2>
+          <p>
+            Our text editor pulls you into focus mode with it’s simplistic
+            design and usability so you can put out your best writings.
+          </p>
+          <a href="#">Text Editor Live Demo →</a>
+        </div>
+        <div class="main-demo__img">
+          <img src="/assets/images/text-editor.png" alt="text editor" />
+        </div>
+      </article>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-container__text">
+          <span>spence.</span>
+          <p>
+            Spense is an open platform for individuals to share their unfiltered
+            thoughts. Discuss the topics you love, and get paid for doing just
+            that.
+          </p>
+        </div>
+        <div class="footer-container__links">
+          <div class="footer-links">
+            <h3>Sitemap</h3>
+            <a href="#">Homepage</a>
+          </div>
+          <div class="footer-links">
+            <h3>Resources</h3>
+            <a href="#">Support</a>
+            <a href="#">Contact</a>
+            <a href="#">FAQ</a>
+          </div>
+          <div class="footer-links">
+            <h3>Company</h3>
+            <a href="#">About</a>
+            <a href="#">Customers</a>
+            <a href="#">Blog</a>
+          </div>
+          <div class="footer-links">
+            <h3>Oportunities</h3>
+            <a href="#">Jobs</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>

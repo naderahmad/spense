@@ -1,0 +1,63 @@
+@use 'variables' as v;
+
+.footer {
+  background-color: v.$primary-color;
+  padding: 64px v.$wrapper-big;
+  color: v.$just-white;
+
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    column-gap: 4rem;
+
+    &__text {
+        margin-bottom: 33px;
+
+      span {
+        font-weight: 700;
+        font-size: 2rem;
+      }
+    }
+
+    &__links {
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 35px;
+        column-gap: 75px;
+
+      .footer-links {
+        display: grid;
+        row-gap: 8px;
+        align-self: start;
+
+        h3 {
+          font-family: v.$family-font-footer;
+          margin-bottom: 8px;
+          font-weight: 700;
+          font-size: 2rem;
+        }
+
+        a {
+          font-family: v.$family-font-footer;
+          text-decoration: none;
+          color: v.$just-white;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+
+  @include v.breakpoint(large) {
+    .footer-container {
+        flex-wrap: nowrap;
+    }
+
+    .footer-container__text {
+        max-width: 35vw;
+    }
+  }
+}

@@ -1,7 +1,0 @@
-@use 'variables' as v;
-
-@media (min-width: $breakpoint-tablet) {
-    .navbar__list {
-        display: flex;
-    }
-}

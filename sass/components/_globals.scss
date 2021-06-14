@@ -1,18 +1,30 @@
 @use 'variables' as v;
 
 html {
-    font-family: v.$family-font-cabin;
+    font-family: v.$family-font-title;
     font-size: 62.5%;
-    margin: 0;
 }
+
+body {
+    font-size: v.$font-size-text;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+  }
+
+h1, h2 {
+    font-size: v.$font-size-titleBig;
+    line-height: 43.74px;
+  }
+
 p {
-    font-size: 18px;
+    font-family: v.$family-font-text;
+    line-height: 27px;
 }
-.button {
-    background-color: v.$primary-color;
-    border: none;
-    border-radius: 5px;
-    color: v.$just-white;
+
+span {
     font-size: 1.6rem;
-    font-weight: bold;
 }
+

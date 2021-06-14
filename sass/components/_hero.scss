@@ -1,118 +1,129 @@
 @use 'variables' as v;
+
 .hero {
-    background-color: v.$secundary-color;
-    @include v.breakpoint(desktop) {
+  background-color: v.$secundary-color;
+  padding: 0 v.$wrapper-big;
+
+  .hero-image {
+    position: relative;
+    background-image: url("/assets/images/img.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+    max-width: 100%;
+    min-height: 366px;
+
+    &__earnings {
+      background-color: v.$just-white;
+      border-radius: 8px;
+      position: absolute;
+      display: grid;
+      row-gap: 14px;
+      padding: 20px;
+      top: 28px;
+      left: 28px;
+
+      hr {
+        color: v.$line-color;
+      }
+
+      .price {
+        font-weight: 700;
+      }
+
+      .btn-cta {
+        @include v.button-bg(v.$primary-color);
+      }
+
+      .btn-cta--earnings {
+        padding: 12px 30px;
+        font-size: 1.6rem;
+      }
+    }
+  }
+
+  .hero-text {
+    padding: 40px 0;
+
+    &__title {
+      font-size: v.$font-size-titleBig;
+      margin-bottom: 8px;
+      line-height: 43.74px;
+
+      @include v.breakpoint(medium) {
+        line-height: 68.04px;
+        font-size: 56px;
+      }
+    }
+
+    &__text {
+      margin-bottom: 16px;
+    }
+
+    &__list {
+      li {
+        font-family: v.$family-font-text;
+        list-style-type: none;
         display: flex;
-        flex-direction: row-reverse;
-        padding: 0 150px 70px 150px;
+        align-items: center;
+        margin-bottom: 8px;
+        font-weight: 600;
+
+        i {
+          width: 24px;
+          height: 24px;
+          margin-right: 16px;
+          font-size: 23px;
+        }
+      }
+
+      li:last-child {
+        margin-bottom: 32px;
+      }
     }
-    .hero__container {
-        position: relative;
-        margin: 0 auto;
-        padding: 0 40px;
-        @include v.breakpoint(desktop) {
-            width: 425px;
-            height: 520px;
+
+    &__form {
+      display: flex;
+      justify-content: flex-start;
+      gap: 16px;
+
+      input {
+        border: 1px solid v.$border-input-color;
+        border-radius: 5px;
+        padding: 18px 24px;
+        max-width: 198px;
+
+        &::placeholder {
+          font-family: v.$family-font-title;
+          font-size: 16px;
         }
-        .hero__img {
-            background-image: url("../assets/images/img.png");
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            margin: 0 auto;
-            min-width: 374px;
-            height: 500px;
-            border-radius: 10px; 
-            @include v.breakpoint(tablet) {
-                height: 366px;
-            }
-            @include v.breakpoint(desktop) {
-                width: 425px;
-                height: 520px;
-            }
-        }
-        .hero__box {
-            position: absolute;
-            top: 30px;
-            left: 70px;
-            background-color: v.$just-white;
-            border-radius: 10px;
-            width: 180px;
-            height: 160px;
-            padding: 20px clamp(20px, 1vw, 1440px);
-            .box__title {
-                font-size: 1.6rem;
-                margin: 0 0 14px 0;
-            }
-            .box__line {
-                border-top: 1px solid #E2E2E2;
-                margin: 0;
-            }
-            .box__price {
-                font-weight: bold;
-                margin: 14px 0;
-            }
-            .button--box {
-                padding: 12px clamp(35px, 1vw, 1440px);
-            }
-        }
+      }
+
+      .btn-cta {
+        @include v.button-bg(v.$primary-color);
+      }
+
+      @media screen and (max-width: 449px) {
+        flex-direction: column;
+      }
     }
-    .hero__content {
-        padding: 0 clamp(20px, 6vw, 1440px);
-        .content__title {
-            font-size: 3.6rem;
-            font-weight: bold;
-            margin: 40px 0 10px 0;
-            @include v.breakpoint(tablet) {
-                font-size: 5.6rem;
-            }
-        }
-        .content__text {
-            font-family: v.$family-font-sans;
-            line-height: 1.7;
-            margin: 0 0 16px 0;
-        }
-        .content__list {
-            list-style: none;
-            padding: 0;
-            .list__icon {
-                color: v.$primary-color;
-                margin-right: 16px;
-            }
-            .list__item {
-                font-size: 1.8rem;
-                font-weight: 600;
-                line-height: 1.6;
-                color: v.$body-color;
-                margin-bottom: 8px;
-            }
-        }
-        .content__form {
-            width: 100%;
-            display: flex;
-            justify-content: space-around;
-            margin-top: 32px;
-            padding-bottom: 40px;
-            .form__input {
-                font-size: 1.8rem;
-                border-radius: 5px;
-                border: 1px solid #B1B1B1;
-                padding: 18px 24px;
-                width: 50%;
-                @include v.breakpoint(tablet) {
-                    margin-right: 16px;
-                }
-            }
-            .form__input::placeholder {
-                color: #ADADAD;
-                font-size: 1.8rem;
-            }
-            .button--form {
-                padding: 18px clamp(20px, 6vw, 1440px);
-            }
-            @include v.breakpoint(tablet) {
-                justify-content: flex-start;
-            }
-        }
+  }
+
+  @include v.breakpoint(large) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 117.38px;
+
+    .hero-image {
+      margin-bottom: 71px;
+      height: 519px;
+      order: 1;
     }
+
+    .hero-text {
+      padding-top: 0;
+    }
+  }
 }

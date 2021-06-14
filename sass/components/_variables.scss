@@ -1,19 +1,36 @@
 // main colors
 $primary-color: #000;
 $secundary-color: #F0EEEB;
-$grey: #C4C4C4;
 $just-white: #FFF;
+$border-input-color: #B1B1B1; 
+$line-color: #E2E2E2;
+
 // font colors
-$title-color: #292929;
 $body-color: #5A5444;
+$title-color: #292929;
+$input-color: #ADADAD;
 $footer-color: #9E9E9E;
+
 // fonts
-$family-font-cabin: 'Cabin', sans-serif;
-$family-font-sans: 'Source Sans Pro', sans-serif;
+$family-font-title: 'Cabin', sans-serif;
+$family-font-text: 'Source Sans Pro', sans-serif;
+$family-font-footer: 'Inter', sans-serif;
+
+// font size
+$font-size-titleBig: 3.6rem; 
+$font-size-titleSmall: 2rem; 
+$font-size-text: 1.8rem; 
+
+// wrapper
+$wrapper-small: clamp(1.25rem, 5.5vw, 9.38rem);
+$wrapper-big: clamp(1.25rem, 8.3vw, 13rem);
+
 // breakPoints
 $breakpoints: (
-    tablet: 768px,
-    desktop: 1440px
+    small: 499px,
+    medium: 699px,
+    large: 999px,
+    xlarge: 1399px
 );
 
 @mixin breakpoint($size) {
@@ -23,3 +40,25 @@ $breakpoints: (
         @content;
     }
 }
+
+// button
+@mixin button-bg($bg) {
+    background-color: $bg;
+    &:hover {
+      background-color: $just-white;
+      color: $primary-color;
+      transition: all 0.3s ease;
+      border-color: $primary-color;
+    }
+  }
+  
+  .btn {
+   color: $just-white;
+   border-color: transparent;
+   max-width: max-content;
+   padding: 18px 24px;
+   border-radius:5px;
+   font-weight: bold;
+   cursor: pointer;
+  }
+  

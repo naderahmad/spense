@@ -1,99 +1,83 @@
 @use 'variables' as v;
-.header {
-    background-color: v.$secundary-color;
-    .header__notification {
-        background-color: v.$primary-color;
-        .notification__text {
-            margin: 0;
-            padding: 20px clamp(20px, 6vw, 1440px);
-            color: v.$just-white;
-            font-size: 1.8rem;
-            text-align: center;
-            line-height: 1.7;
-            font-weight: 700;
-            .text__link {
-                color: v.$just-white;
-            }
-            @include v.breakpoint(desktop) {
-                padding: 10px 0;
-            }
-        }
-        @include v.breakpoint(desktop) {
-            height: 50px;
-        }
-    }
-    .navbar {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 10px clamp(20px, 6vw, 1440px);
-        @include v.breakpoint(desktop) {
-            padding: 40px 150px;
-        }
-        .navbar__logo {
-            font-weight: 700;
-            font-size: 2rem;
-        }
-        .navbar__wrapper {
-            display: flex;
-            @include v.breakpoint(tablet) {
-                flex-basis: auto;
-            }
-            @include v.breakpoint(desktop) {
-                flex-basis: 70%;
-                justify-content: space-between;
-            }
-        }
-        .navbar__list {
-            display: none;
-            list-style: none;
-            .list__item {
-                margin-right: 24px;
-                .list_link {
-                    text-decoration: none;
-                    color: v.$primary-color;
-                    font-size: 1.8rem;
-                }
-            }
-            @include v.breakpoint(tablet) {
-                display: flex;
-                align-items: center;
-            }
-        }
-        .navbar__link {
-            .navbar__menu {
-                font-size: 2rem;
-                color: v.$primary-color;
-                @include v.breakpoint(tablet) {
-                    display: none;
-                }
-            }
-            @include v.breakpoint(tablet) {
-                display: none;
-            }
-        } 
-    }
-    .navbar__right {
-        display: none;
-        .list_link {
-            font-size: 1.8rem;
-            text-decoration: none;
-            color: v.$primary-color;
-            margin-right: 24px;
-        }
-        .button--navbar {
-            display: none;
-            width: 137px;
-            height: 58px;
-            @include v.breakpoint(tablet) {
-                display:block;
-            }
-        }
-        @include v.breakpoint(tablet) {
-            display:block;
-            display: flex;
-            align-items: center;
-        } 
-    }
-}
 
+.header {
+  .header-notification {
+    padding: 20px v.$wrapper-big;
+    background-color: v.$primary-color;
+
+    &__text {
+      color: v.$just-white;
+      text-align: center;
+      font-weight: 700;
+
+      a {
+        color: inherit;
+
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  .header-navbar {
+    background-color: v.$secundary-color;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px v.$wrapper-big;
+
+    &__logo {
+      font-weight: 700;
+      font-size: v.$font-size-titleSmall;
+    }
+
+    &__container {
+      display: none;
+
+      .header-navbar__links,
+      .header-navbar__cta {
+        a {
+          color: v.$primary-color;
+          margin-right: 24px;
+          text-decoration: none;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+
+      .header-navbar__links {
+        display: flex;
+        align-items: center;
+      }
+
+      .header-navbar__cta {
+        .btn-cta {
+          @include v.button-bg(v.$primary-color);
+        }
+      }
+
+      @include v.breakpoint(medium) {
+        display: flex;
+      }
+
+      @include v.breakpoint(large) {
+        justify-content: space-between;
+        flex-basis: 60%;
+      }
+
+    }
+
+    &__menu {
+        i {
+          color: v.$primary-color;
+        }
+
+        @include v.breakpoint(medium) {
+          display: none;
+        }
+      }
+  }
+}

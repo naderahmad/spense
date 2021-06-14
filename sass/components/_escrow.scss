@@ -1,0 +1,80 @@
+@use 'variables' as v;
+
+.main {
+  .main-escrow {
+    background-color: v.$secundary-color;
+    margin: 0 v.$wrapper-big;
+
+    &__text {
+      padding: 40px 40px;
+    }
+
+    &__img {
+      padding: 0 40px;
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  .main-demo {
+    margin: 48px v.$wrapper-big 0;
+  }
+
+  .main-container {
+    .main-container__text {
+      h2 {
+        margin-bottom: 8px;
+      }
+
+      p {
+        margin-bottom: 16px;
+      }
+
+      a {
+        color: v.$primary-color;
+        font-weight: 700;
+      }
+    }
+  }
+
+  @include v.breakpoint(medium) {
+    .main-escrow__text {
+      padding: 67px 97px 40px 97px;
+    }
+  }
+
+  @include v.breakpoint(large) {
+    .main-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+
+      &__text {
+        align-self: center;
+      }
+    }
+
+    .main-demo {
+      margin-bottom: 80px;
+      column-gap: 8%;
+
+      &__img {
+        order: -1;
+      }
+    }
+
+    .main-escrow {
+      padding: 45px 72px 0 72px;
+      height: 405px;
+      column-gap: 3%;
+
+      &__text {
+        padding: 0;
+      }
+
+      &__img {
+        padding: 0;
+        justify-content: flex-end;
+      }
+    }
+  }
+}
