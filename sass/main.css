@@ -132,7 +132,7 @@ span {
 }
 .hero .hero-image {
   position: relative;
-  background-image: url("/assets/images/img.png");
+  background-image: url("../assets/images/img.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
